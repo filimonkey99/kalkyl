@@ -1,6 +1,6 @@
 class App extends Domer {
 
-      
+
 
 
     _egetKap = ''
@@ -37,7 +37,7 @@ class App extends Domer {
     _collectedKostnad = []
     _kostnadSum = 0;
 
-    
+
 
     _cashFlow = this._inbetalSum - this._utbetalSum;
     _omsett = this._inbetalSum + this._inkomstSum + this._intäktSum;
@@ -45,9 +45,9 @@ class App extends Domer {
     _TG = this._TTB / this._kostnadSum;
     _resultat = this._inkomstSum - this._utgiftSum;
     _rörelseMarginal = (this._resultat + this._intäktSum) / this._omsett;
-    _kapital= this._egetKapSum + this._skulderSum;
-    _KOH= this._omsett/this._kapital;
-    _räntabilitet= (this._resultat + this._intäktSum)/this._kapital;
+    _kapital = this._egetKapSum + this._skulderSum;
+    _KOH = this._omsett / this._kapital;
+    _räntabilitet = (this._resultat + this._intäktSum) / this._kapital;
 
 
 
@@ -87,6 +87,40 @@ class App extends Domer {
 
     }
 
+    onClearClick() {
+        this._egetKap = ''
+        this._collectedEgetKap = []
+        this._egetKapSum = 0
+
+        this._skulder = ''
+        this._collectedSkulder = []
+        this._skulderSum = 0;
+
+        this._utbetal = ''
+        this._collectedUtbetal = []
+        this._utbetalSum = 0;
+
+        this._inbetal = ''
+        this._collectedInbetal = []
+        this._inbetalSum = 0;
+
+        this._inkomst = ''
+        this._collectedInkomst = []
+        this._inkomstSum = 0;
+
+        this._utgift = ''
+        this._collectedUtgift = []
+        this._utgiftSum = 0;
+
+        this._intäkt = ''
+        this._collectedIntäkt = []
+        this._intäktSum = 0;
+
+        this._kostnad = ''
+        this._collectedKostnad = []
+        this._kostnadSum = 0;
+
+    }
 
     onInbetalClick() {
         this._inbetalSum = 0;
@@ -158,6 +192,7 @@ class App extends Domer {
 
     onBokslutClick() {
 
+
         this._isCalcStart = true;
         this._cashFlow = this._inbetalSum - this._utbetalSum;
         this._omsett = this._inbetalSum + this._inkomstSum + this._intäktSum;
@@ -165,16 +200,9 @@ class App extends Domer {
         this._TG = this._TTB / this._kostnadSum;
         this._resultat = this._inkomstSum - this._utgiftSum;
         this._rörelseMarginal = (this._resultat + this._intäktSum) / this._omsett;
-        this._kapital= this._egetKapSum + this._skulderSum;
-        this._KOH= this._omsett/this._kapital;
-        this._räntabilitet= (this._resultat + this._intäktSum)/this._kapital;
-        
-
-
-
-
-
-
+        this._kapital = this._egetKapSum + this._skulderSum;
+        this._KOH = this._omsett / this._kapital;
+        this._räntabilitet = (this._resultat + this._intäktSum) / this._kapital;
 
     }
 
@@ -234,27 +262,25 @@ class App extends Domer {
             <br>
             <br>
           
-
             <input style ="color:black;" type= "text" bind="_skulder" placeholder="Skriv in skulder"> 
             <button click ="onSkulderClick" type="button" > Lägg Till Ny skuld </button>
             
             <input style ="color:black;" type= "text" bind="_egetKap" placeholder="Skriv in eget kapital"> 
             <button click ="onEgetKapClick" type="button" > Lägg Till eget kapital </button>
 
-            
-           
             <button click ="onBokslutClick" type="button" > Bokslut </button>
-
-          
+            <br>
+            <br>
+          <button click="onClearClick" type="button"> Clear </button>
 
             `
-            
-        }
-        
-        
-    
+
+    }
+
+
+
     render(html) {
-        
+
         return html`
         
         <div>
