@@ -1,6 +1,6 @@
 class App extends Domer {
 
-     
+      
 
 
     _egetKap = ''
