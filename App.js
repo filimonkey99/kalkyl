@@ -120,6 +120,17 @@ class App extends Domer {
         this._collectedKostnad = []
         this._kostnadSum = 0;
 
+    this._cashFlow = 0
+    this._omsett = 0
+    this._TTB = 0
+    this._TG = 0
+    this._resultat =0
+    this._rörelseMarginal=0
+    this._kapital =0 
+    this._KOH = 0
+    this._räntabilitet = 0 
+
+
     }
 
     onInbetalClick() {
