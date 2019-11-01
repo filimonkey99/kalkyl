@@ -1,0 +1,42 @@
+
+
+div {
+ 
+    text-shadow: 0 1px 0 #ccc,
+    0 2px 0 green,
+    0 3px 0 rgb(22, 190, 6),
+    0 4px 0  green,
+    0 5px 0 rgb(22, 190, 6),
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+
+    display: inline-block;
+ background-image: url("money.jpeg") ;
+ height: 100%;
+width: 100%;
+
+
+}
+
+form
+    {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch;
+    
+    display: inline-block;
+background-color: gray;
+height: 100%;
+width: 100%;
+
+
+
+}
